@@ -46,14 +46,14 @@ function dataLoaded(UNEMP) {
 	data.addColumn('number', 'Unemployment');
 	data.addRows(bigArray);
 	var options = {
-		title: 'Civilian Unemployment',
 		legend:{position:'none'},		
 		curveType: 'function',
-		explorer:{actions:['dragToZoom','rightClickToReset'],axis:'horizontal'},
+		explorer:{actions:['dragToZoom','rightClickToReset'],axis:'horizontal',maxZoomIn:.01},
 		height:500,
 		chartArea:{height:400,width:1000},
 		hAxis:{title:'Date'},
-		vAxis:{title:'Percent unemployed',ticks:[0,2,4,6,8,10,12],format:'#'}
+		vAxis:{title:'Percent unemployed',ticks:[0,2,4,6,8,10,12],format:'#'},
+		selectionMode:'multiple'
 	};
 		
 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
