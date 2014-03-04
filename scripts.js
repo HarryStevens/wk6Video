@@ -47,10 +47,12 @@ function dataLoaded(UNEMP) {
 	data.addRows(bigArray);
 	var options = {
 		title: 'Civilian Unemployment',
+		legend:{position:'none'},		
+		curveType: 'function',
+		explorer:{actions:['dragToZoom','rightClickToReset'],axis:'horizontal'},
 		height:500,
 		chartArea:{height:400,width:1000},
 		hAxis:{title:'Date'},
-		legend:{position:'none'},
 		vAxis:{title:'Percent unemployed',ticks:[0,2,4,6,8,10,12],format:'#'}
 	};
 		
